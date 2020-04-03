@@ -1,0 +1,23 @@
+.header {
+    $heightHeader: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    height: $heightHeader;
+    padding: 0 16px;
+
+
+    &__item {
+        padding-right: 16px;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: $heightHeader;
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}

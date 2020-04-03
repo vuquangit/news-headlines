@@ -1,0 +1,36 @@
+.basic-template {
+    $maxWidth: 935px;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    &__header {
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+        border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, .05);
+
+        &--content {
+            width: 100%;
+            max-width: $maxWidth
+        }
+    }
+
+    &__main {
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+
+        &--content {
+            width: 100%;
+            max-width: $maxWidth
+        }
+    }
+}
