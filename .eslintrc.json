@@ -1,7 +1,8 @@
 {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "node": true
     },
     "extends": [
         "eslint:recommended",
@@ -9,7 +10,15 @@
     ],
     "globals": {
         "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
+        "SharedArrayBuffer": "readonly",
+        "window": true,
+        "document": true,
+        "localStorage": true,
+        "FormData": true,
+        "FileReader": true,
+        "Blob": true,
+        "navigator": true,
+        "fetch": true
     },
     "parserOptions": {
         "ecmaFeatures": {
@@ -18,15 +27,23 @@
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    "plugins": [
-        "react"
-    ],
-    "rules": {},
-    "settings": {
-        "import/resolver": {
-            "node": {
-                "paths": ["src"]
+    "plugins": ["react-hooks", "react", "jsx-a11y"],
+    "rules": {
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [".js", ".jsx"]
             }
-        }
+        ],
+        "react/prop-types": 0,
+        "no-underscore-dangle": 0,
+        "import/imports-first": ["error", "absolute-first"],
+        "import/newline-after-import": "error",
+        "indent": ["error", 2],
+        "quotes": ["error", "single"],
+        "semi": ["error", "never"],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/jsx-fragments": 0
     }
 }

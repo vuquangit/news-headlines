@@ -1,16 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import { Provider } from "react-redux";
+
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import configureStore from "Redux/Store";
+
+import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "antd/dist/antd.css";
 
+const store = configureStore();
+
+// dev tool
+if (process.env.NODE_ENV !== "development") {
+  if (typeof window.__REACT_DEVTOOLS_GLOBAL_HOOK__ === "object") {
+    for (const [key, value] of Object.entries(
+      window.__REACT_DEVTOOLS_GLOBAL_HOOK__
+    )) {
+      window.__REACT_DEVTOOLS_GLOBAL_HOOK__[key] =
+        typeof value === "function" ? () => {} : null;
+    }
+  }
+}
+
 ReactDOM.render(
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>,
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById("root")
 );
 

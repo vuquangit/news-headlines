@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
-import Loading from "Template/Pages/Loading";
+import Loading from "Components/Loading";
 
 const RedirectRoute = props => (
   <Redirect
