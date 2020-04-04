@@ -4,12 +4,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { get, isEqual } from "lodash";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { withRouter } from "react-router-dom";
 
 import menuList from "./menuList";
 import { updateKeyword } from "Redux/TopHeadlines/headlines.action";
 import "./customNews.scss";
 
-const CustomNews = () => {
+const CustomNews = ({ match = {}, history = {} }) => {
   const dispatch = useDispatch();
 
   const keyword = useSelector((state = {}) =>
@@ -19,9 +20,13 @@ const CustomNews = () => {
   const handleCustomClick = useCallback(
     async ({ key }) => {
       const val = menuList[key];
-      if (!isEqual(keyword, val)) await dispatch(updateKeyword(val));
+      if (!isEqual(keyword, val)) {
+        await dispatch(updateKeyword(val));
+
+        if (match.path !== "/") history.push("/");
+      }
     },
-    [dispatch, keyword]
+    [dispatch, history, keyword, match]
   );
 
   const handleCustomClear = useCallback(async () => {
@@ -59,4 +64,4 @@ const CustomNews = () => {
   );
 };
 
-export default CustomNews;
+export default withRouter(CustomNews);

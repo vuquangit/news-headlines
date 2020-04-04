@@ -5,7 +5,7 @@ import InfiniteScroll from "react-infinite-scroller";
 import { useSelector, useDispatch } from "react-redux";
 
 import BasicTemplate from "Template/BasicTemplate";
-import NewsList from "Container/NewsList";
+import NewsList from "Components/NewsList";
 import Loading from "Components/Loading";
 import {
   updateNewsHeadlines,

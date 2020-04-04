@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import moment from "moment";
 import { Modal, Button } from "antd";
 
-import NewsDetail from "Container/NewsDetail";
+import NewsDetail from "Components/NewsDetail";
 import "./newsItem.scss";
 
 const NewsItem = (props) => {

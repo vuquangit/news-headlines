@@ -10,12 +10,12 @@ const callApi = async (
   method = "POST",
   headers = {}
 ) => {
-  console.log({
-    method,
-    url: `${SERVER_BASE_URL}${endpoint}`,
-    ...options,
-    headers,
-  });
+  // console.log({
+  //   method,
+  //   url: `${SERVER_BASE_URL}${endpoint}`,
+  //   ...options,
+  //   headers,
+  // });
 
   const result = await axios({
     method,
