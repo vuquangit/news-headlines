@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { Menu, Dropdown } from "antd";
 import { useSelector, useDispatch } from "react-redux";
-import { get } from "lodash";
+import { get, isEqual } from "lodash";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
@@ -18,9 +18,10 @@ const CustomNews = () => {
 
   const handleCustomClick = useCallback(
     async ({ key }) => {
-      await dispatch(updateKeyword(menuList[key]));
+      const val = menuList[key];
+      if (!isEqual(keyword, val)) await dispatch(updateKeyword(val));
     },
-    [dispatch]
+    [dispatch, keyword]
   );
 
   const handleCustomClear = useCallback(async () => {
@@ -37,7 +38,7 @@ const CustomNews = () => {
 
   return (
     <Dropdown overlay={menu} className="custom-news">
-      <div onClick={e => e.preventDefault()} className="custom-news__content">
+      <div onClick={(e) => e.preventDefault()} className="custom-news__content">
         {keyword ? keyword : "Custom News"}
         {menuList && menuList.length > 0 ? (
           <FontAwesomeIcon

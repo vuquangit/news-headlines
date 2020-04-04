@@ -8,7 +8,9 @@ const NewsList = ({ items = [] }) => {
   const _renderItem = () =>
     !isEmpty(items) &&
     items.length > 0 &&
-    items.map((item, idx) => <NewsItem key={idx} {...item} />);
+    items.map((item, idx) =>
+      item.title ? <NewsItem key={idx} {...item} /> : null
+    );
 
   return <div className="news-list">{_renderItem()}</div>;
 };

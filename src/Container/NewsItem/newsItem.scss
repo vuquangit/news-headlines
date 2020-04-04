@@ -100,3 +100,24 @@
         }
     }
 }
+
+.modal-detail {
+    width: 100% !important;
+    max-width: 935px;
+
+
+    .ant-modal-close-x {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+        font-style: normal;
+        line-height: 36px;
+        text-align: center;
+        text-transform: none;
+        text-rendering: auto;
+    }
+}

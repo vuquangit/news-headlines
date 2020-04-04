@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback } from "react";
 import axios from "axios";
-import { get, isEqual } from "lodash";
+import { get, isEqual, omit } from "lodash";
 import InfiniteScroll from "react-infinite-scroller";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -9,8 +9,9 @@ import NewsList from "Container/NewsList";
 import Loading from "Components/Loading";
 import {
   updateNewsHeadlines,
-  increaseNewsPage
+  increaseNewsPage,
 } from "Redux/TopHeadlines/headlines.action";
+import { sourceNews } from "./sourceNews";
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const HomePage = () => {
     limit = 20,
     page = 1,
     totalResults = 0,
-    keyword = ""
+    keyword = "",
   } = useSelector((state = {}) => get(state, "topHeadlines", {}), isEqual());
 
   const apiKey = process.env.REACT_APP_API_KEY || "";
@@ -31,21 +32,24 @@ const HomePage = () => {
 
     (async () => {
       const params = {
-        country: "us",
+        sources: sourceNews,
         apiKey,
         q: keyword,
         pageSize: limit,
-        page: page
+        page: page,
       };
 
       await dispatch(
         updateNewsHeadlines({
-          endpoint: "/top-headlines",
+          endpoint: keyword ? "/everything" : "/top-headlines",
           method: "GET",
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
           },
-          options: { params, cancelToken: source.token }
+          options: {
+            params: keyword ? params : omit(params, ["q"]),
+            cancelToken: source.token,
+          },
         })
       );
     })();
@@ -70,7 +74,7 @@ const HomePage = () => {
           pageStart={0}
           loadMore={getMoreItems}
           hasMore={hasMoreItems}
-          // threshold={300}
+          threshold={500}
         >
           <NewsList items={data || []} />
         </InfiniteScroll>

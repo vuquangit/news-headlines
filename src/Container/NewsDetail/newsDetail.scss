@@ -1,0 +1,96 @@
+.news-detail {
+    &__header {
+        &--title {
+            font-size: 32px;
+            line-height: 36px;
+            color: #222;
+        }
+
+        &--subtitle {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+
+            .p-source {
+                font-size: 13px;
+                font-family: SFD-SemiBold;
+                color: #777;
+                text-transform: uppercase;
+                margin-right: 10px;
+            }
+
+            .p-time {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+
+                &__icon {
+                    margin-left: 16px;
+                }
+
+                &__content {
+                    font-size: 13px;
+                    color: #777;
+                    position: relative;
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+
+    &__content {
+        &--description {
+            font-size: 14px;
+            line-height: 20px;
+            padding-top: 5px;
+            font-weight: normal;
+            color: #56585c;
+            display: block;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        &--img {
+            width: 100% !important;
+            margin-bottom: 30px;
+        }
+
+        &--author {
+            text-align: right;
+        }
+
+        &--source {
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: bold;
+            font-family: 'Times New Roman';
+            text-decoration: none;
+            color: #383e54;
+
+            &:hover {
+                text-decoration: none;
+                color: #333;
+            }
+        }
+
+        &--more {
+            text-decoration: none;
+            color: #383e54;
+
+            &:hover {
+                text-decoration: none;
+                color: #333;
+            }
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 25px;
+            color: #222;
+            font-family: "Times New Roman", Georgia, Serif;
+            margin-bottom: 25px;
+        }
+    }
+}
