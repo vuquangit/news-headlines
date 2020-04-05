@@ -62,7 +62,7 @@ const LoginForm = () => {
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
       scrollToFirstError
-      className="login-form"
+      className="login__form"
     >
       <Form.Item
         name="username"
@@ -86,11 +86,13 @@ const LoginForm = () => {
           onChange={handleChaneInput}
         />
       </Form.Item>
-      <Typography.Text type="danger">{errorLogin}</Typography.Text>
-      <Form.Item>
+      <Form.Item className="login__form--item">
         <Button type="primary" htmlType="submit" block>
           Login
         </Button>
+      </Form.Item>
+      <Form.Item className="login__form--item">
+        <Typography.Text type="danger">{errorLogin}</Typography.Text>
       </Form.Item>
     </Form>
   );

@@ -1,12 +1,14 @@
 .basic-template {
     $maxWidth: 935px;
 
-    width: 100%;
-    height: 100vh;
     display: flex;
     // flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
 
     &__header {
         display: flex;

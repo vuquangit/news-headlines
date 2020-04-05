@@ -1,0 +1,341 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`News Detail Test get default NewsDetail no params  1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="news-detail"
+      >
+        <div
+          class="news-detail__header"
+        >
+          <h1
+            class="news-detail__header--title"
+          />
+          <div
+            class="news-detail__header--subtitle"
+          >
+            
+          </div>
+        </div>
+        <div
+          class="news-detail__content"
+        >
+          <h2
+            class="news-detail__content--description"
+          />
+          
+          <p>
+            
+          </p>
+          <p
+            class="news-detail__content--author"
+          />
+          
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="news-detail"
+    >
+      <div
+        class="news-detail__header"
+      >
+        <h1
+          class="news-detail__header--title"
+        />
+        <div
+          class="news-detail__header--subtitle"
+        >
+          
+        </div>
+      </div>
+      <div
+        class="news-detail__content"
+      >
+        <h2
+          class="news-detail__content--description"
+        />
+        
+        <p>
+          
+        </p>
+        <p
+          class="news-detail__content--author"
+        />
+        
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`News Detail Test get default NewsDetail with data  1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="news-detail"
+      >
+        <div
+          class="news-detail__header"
+        >
+          <h1
+            class="news-detail__header--title"
+          >
+            LIVE Coronavirus: 4,500 tests to be carried out per day from this week, HSE says
+          </h1>
+          <div
+            class="news-detail__header--subtitle"
+          >
+            <span
+              class="p-source"
+            >
+              The Irish Times
+            </span>
+            <div
+              class="p-time"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-clock fa-w-16 p-time__icon"
+                data-icon="clock"
+                data-prefix="far"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="p-time__content"
+              >
+                Sunday, April 5, 2020 5:53 PM
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="news-detail__content"
+        >
+          <h2
+            class="news-detail__content--description"
+          >
+            70,000 applications made to Ireland on Call healthcare worker scheme
+          </h2>
+          <img
+            alt="70,000 applications made to Ireland on Call healthcare worker scheme"
+            class="news-detail__content--img"
+            src="https://www.irishtimes.com/polopoly_fs/1.4221277.1586082453!/image/image.jpg"
+          />
+          <p>
+            A medic wearing personal protective equipment in Bergamo, Italy. Some of the consignment of PPE to Ireland last weekend was found by the HSE to be not suitable for use. Photograph: Getty
+          </p>
+          <p
+            class="news-detail__content--author"
+          >
+            The Irish Times
+          </p>
+          <a
+            class="news-detail__content--source"
+            href="https://www.irishtimes.com/news/ireland/irish-news/coronavirus-4-500-tests-to-be-carried-out-per-day-from-this-week-hse-says-1.4221258"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Original news: https://www.irishtimes.com/news/ireland/irish-news/coronavirus-4-500-tests-to-be-carried-out-per-day-from-this-week-hse-says-1.4221258
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="news-detail"
+    >
+      <div
+        class="news-detail__header"
+      >
+        <h1
+          class="news-detail__header--title"
+        >
+          LIVE Coronavirus: 4,500 tests to be carried out per day from this week, HSE says
+        </h1>
+        <div
+          class="news-detail__header--subtitle"
+        >
+          <span
+            class="p-source"
+          >
+            The Irish Times
+          </span>
+          <div
+            class="p-time"
+          >
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-clock fa-w-16 p-time__icon"
+              data-icon="clock"
+              data-prefix="far"
+              focusable="false"
+              role="img"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"
+                fill="currentColor"
+              />
+            </svg>
+            <span
+              class="p-time__content"
+            >
+              Sunday, April 5, 2020 5:53 PM
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="news-detail__content"
+      >
+        <h2
+          class="news-detail__content--description"
+        >
+          70,000 applications made to Ireland on Call healthcare worker scheme
+        </h2>
+        <img
+          alt="70,000 applications made to Ireland on Call healthcare worker scheme"
+          class="news-detail__content--img"
+          src="https://www.irishtimes.com/polopoly_fs/1.4221277.1586082453!/image/image.jpg"
+        />
+        <p>
+          A medic wearing personal protective equipment in Bergamo, Italy. Some of the consignment of PPE to Ireland last weekend was found by the HSE to be not suitable for use. Photograph: Getty
+        </p>
+        <p
+          class="news-detail__content--author"
+        >
+          The Irish Times
+        </p>
+        <a
+          class="news-detail__content--source"
+          href="https://www.irishtimes.com/news/ireland/irish-news/coronavirus-4-500-tests-to-be-carried-out-per-day-from-this-week-hse-says-1.4221258"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Original news: https://www.irishtimes.com/news/ireland/irish-news/coronavirus-4-500-tests-to-be-carried-out-per-day-from-this-week-hse-says-1.4221258
+        </a>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

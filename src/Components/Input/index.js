@@ -7,6 +7,7 @@ import React, {
 } from "react";
 import { Input as InputAntd } from "antd";
 import classNames from "classnames";
+
 import "./input.scss";
 
 const WrappedInput = ({ forwardedRef, props, children }) => {

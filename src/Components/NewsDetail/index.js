@@ -2,6 +2,7 @@ import React from "react";
 import moment from "moment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
+import PropTypes from "prop-types";
 
 import "./newsDetail.scss";
 
@@ -72,6 +73,17 @@ const NewsDetail = ({
       </div>
     </div>
   );
+};
+
+NewsDetail.propTypes = {
+  source: PropTypes.object,
+  author: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  urlToImage: PropTypes.string,
+  publishedAt: PropTypes.string,
+  content: PropTypes.string,
+  url: PropTypes.string,
 };
 
 export default NewsDetail;

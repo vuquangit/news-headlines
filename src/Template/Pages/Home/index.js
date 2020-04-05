@@ -53,6 +53,11 @@ const HomePage = () => {
       );
     })();
 
+    // scroll to top
+    if (page === 1) {
+      window.scrollTo(0, 0);
+    }
+
     return () => {
       source.cancel();
     };

@@ -1,5 +1,6 @@
 import React from "react";
 import { isEmpty } from "lodash";
+import PropTypes from "prop-types";
 
 import NewsItem from "Components/NewsItem";
 import "./newsList.scss";
@@ -13,6 +14,10 @@ const NewsList = ({ items = [] }) => {
         )}
     </div>
   );
+};
+
+NewsList.propTypes = {
+  items: PropTypes.array,
 };
 
 export default NewsList;

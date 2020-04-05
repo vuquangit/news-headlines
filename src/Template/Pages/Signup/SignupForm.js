@@ -59,7 +59,7 @@ const SignupForm = () => {
         rules={[
           { required: true, message: "Please input your username!" },
           () => ({
-            validator(rule, value) {
+            validator(_rule, value) {
               if (!value || !find(users, (item) => item.username === value)) {
                 return Promise.resolve();
               }
@@ -88,7 +88,7 @@ const SignupForm = () => {
             message: "Please input your E-mail!",
           },
           () => ({
-            validator(rule, value) {
+            validator(_rule, value) {
               if (!value || !find(users, (item) => item.email === value)) {
                 return Promise.resolve();
               }
@@ -119,6 +119,10 @@ const SignupForm = () => {
             required: true,
             message: "Please input your password!",
           },
+          {
+            min: 8,
+            message: "Length greater than 8 characters",
+          },
         ]}
         hasFeedback
       >
@@ -137,8 +141,12 @@ const SignupForm = () => {
             required: true,
             message: "Please confirm your password!",
           },
+          {
+            min: 8,
+            message: "Length greater than 8 characters",
+          },
           ({ getFieldValue }) => ({
-            validator(rule, value) {
+            validator(_rule, value) {
               if (!value || getFieldValue("password") === value) {
                 return Promise.resolve();
               }
