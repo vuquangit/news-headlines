@@ -15,7 +15,7 @@ import { sourceNews } from "./sourceNews";
 
 const HomePage = () => {
   const dispatch = useDispatch();
-
+  const apiKey = process.env.REACT_APP_API_KEY || "";
   const {
     isFetching = false,
     data = [],
@@ -24,8 +24,6 @@ const HomePage = () => {
     totalResults = 0,
     keyword = "",
   } = useSelector((state = {}) => get(state, "topHeadlines", {}), isEqual());
-
-  const apiKey = process.env.REACT_APP_API_KEY || "";
 
   useEffect(() => {
     const source = axios.CancelToken.source();
@@ -37,6 +35,7 @@ const HomePage = () => {
         q: keyword,
         pageSize: limit,
         page: page,
+        sortBy: "publishedAt",
       };
 
       await dispatch(

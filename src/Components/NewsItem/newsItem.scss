@@ -84,6 +84,16 @@
             }
         }
 
+        &--source {
+            font-size: 14px;
+            color: #41455e;
+            font-weight: 600;
+
+            &::after {
+                content: ' - ';
+            }
+        }
+
         &--published-at {
             font-size: 14px;
             font-weight: 400;

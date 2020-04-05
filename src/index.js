@@ -1,16 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
+import throttle from "lodash.throttle";
 
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import configureStore from "Redux/Store";
+import { loadState, saveState } from "./localStorage";
 
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "antd/dist/antd.css";
 
-const store = configureStore();
+// store redux
+const preloadedState = loadState();
+const store = configureStore(preloadedState);
+store.subscribe(
+  // Throttle: invokes a function at most once per every 1000 milliseconds.
+  throttle(() => {
+    saveState({
+      profile: store.getState().profile,
+    });
+  }, 1000)
+);
 
 // dev tool
 if (process.env.NODE_ENV !== "development") {

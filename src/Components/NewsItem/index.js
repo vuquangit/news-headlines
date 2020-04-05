@@ -11,6 +11,7 @@ const NewsItem = (props) => {
     description = "",
     urlToImage = "",
     publishedAt = "",
+    source = {},
   } = props;
 
   const [visibleModal, setVisibleModal] = useState(false);
@@ -43,11 +44,16 @@ const NewsItem = (props) => {
         <h3 onClick={handleShowModal} className="news-item__info--title">
           {title}
         </h3>
-        {publishedAt && (
-          <span className="news-item__info--published-at">
-            {moment(publishedAt).fromNow()}
-          </span>
-        )}
+        <div>
+          {source.name && (
+            <span className="news-item__info--source">{source.name}</span>
+          )}
+          {publishedAt && (
+            <span className="news-item__info--published-at">
+              {moment(publishedAt).fromNow()}
+            </span>
+          )}
+        </div>
         {description && (
           <span className="news-item__info--description">{description}</span>
         )}

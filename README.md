@@ -1,3 +1,5 @@
+**NOTE** : Add .env file with the content as .env.template and start the project
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
