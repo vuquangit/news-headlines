@@ -16,6 +16,7 @@ import { updateProfile } from "Redux/Profile/profile.action";
 import { sha512 } from "utils/sha512";
 
 const SignupForm = () => {
+  const [form] = Form.useForm();
   const salt = process.env.REACT_APP_SALT || "";
   const dispatch = useDispatch();
   const [users, setUsers] = useState(() => {
@@ -47,9 +48,10 @@ const SignupForm = () => {
   return (
     <Form
       name="singup-form"
-      initialValues={{ remember: true }}
+      form={form}
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
+      scrollToFirstError
       className="signup-form"
     >
       <Form.Item
@@ -57,7 +59,7 @@ const SignupForm = () => {
         rules={[
           { required: true, message: "Please input your username!" },
           () => ({
-            validator(value) {
+            validator(rule, value) {
               if (!value || !find(users, (item) => item.username === value)) {
                 return Promise.resolve();
               }
@@ -86,7 +88,7 @@ const SignupForm = () => {
             message: "Please input your E-mail!",
           },
           () => ({
-            validator(value) {
+            validator(rule, value) {
               if (!value || !find(users, (item) => item.email === value)) {
                 return Promise.resolve();
               }
@@ -136,7 +138,7 @@ const SignupForm = () => {
             message: "Please confirm your password!",
           },
           ({ getFieldValue }) => ({
-            validator(value) {
+            validator(rule, value) {
               if (!value || getFieldValue("password") === value) {
                 return Promise.resolve();
               }

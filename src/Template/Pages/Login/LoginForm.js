@@ -10,6 +10,7 @@ import { updateProfile } from "Redux/Profile/profile.action";
 import { sha512 } from "utils/sha512";
 
 const LoginForm = () => {
+  const [form] = Form.useForm();
   const salt = process.env.REACT_APP_SALT || "";
   const dispatch = useDispatch();
   const serializedState = localStorage.getItem("users");
@@ -57,9 +58,10 @@ const LoginForm = () => {
   return (
     <Form
       name="login-form"
-      initialValues={{ remember: true }}
+      form={form}
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
+      scrollToFirstError
       className="login-form"
     >
       <Form.Item
