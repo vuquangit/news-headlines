@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import BasicTemplate from "Template/BasicTemplate";
 import { useSelector, useDispatch } from "react-redux";
 import { Button } from "antd";
@@ -14,9 +14,9 @@ const Profile = () => {
     isEqual()
   );
 
-  const handleLogout = async () => {
+  const handleLogout = useCallback(async () => {
     await dispatch(clearProfile());
-  };
+  }, [dispatch]);
 
   return (
     <BasicTemplate>

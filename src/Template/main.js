@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import PrivateRoute from "Container/PrivateRoute";
 import pageConfigs from "./pageConfigs";
+import Page404 from "Template/Pages/404";
 
 const Main = () => {
   const _renderPage = () =>
@@ -16,7 +17,10 @@ const Main = () => {
 
   return (
     <BrowserRouter>
-      <Switch>{_renderPage()}</Switch>
+      <Switch>
+        {_renderPage()}
+        <Route component={Page404} />
+      </Switch>
     </BrowserRouter>
   );
 };

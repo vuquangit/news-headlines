@@ -37,10 +37,6 @@ const SignupForm = () => {
     [dispatch, salt]
   );
 
-  const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
-  };
-
   useEffect(() => {
     localStorage.setItem("users", JSON.stringify(users));
   }, [users]);
@@ -50,7 +46,6 @@ const SignupForm = () => {
       name="singup-form"
       form={form}
       onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
       scrollToFirstError
       className="signup-form"
     >

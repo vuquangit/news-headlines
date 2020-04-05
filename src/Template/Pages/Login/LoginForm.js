@@ -30,7 +30,6 @@ const LoginForm = () => {
 
   const onFinish = useCallback(
     async (values) => {
-      console.log("Success:", values);
       const userFound = find(
         users,
         (item) => item.username === values.username
@@ -47,10 +46,6 @@ const LoginForm = () => {
     [dispatch, users, validatePassword]
   );
 
-  const onFinishFailed = useCallback((errorInfo) => {
-    console.log("Failed:", errorInfo);
-  }, []);
-
   const handleChaneInput = useCallback(() => {
     errorLogin && setErrorLogin("");
   }, [errorLogin]);
@@ -60,7 +55,6 @@ const LoginForm = () => {
       name="login-form"
       form={form}
       onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
       scrollToFirstError
       className="login__form"
     >
