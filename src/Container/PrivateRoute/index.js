@@ -1,24 +1,31 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
-import Loading from "Template/Pages/Loading";
+import { useSelector } from "react-redux";
+import { get, isEqual, isEmpty } from "lodash";
 
-const RedirectRoute = props => (
+import Loading from "Components/Loading";
+
+const RedirectRoute = (props) => (
   <Redirect
     to={{
       pathname: "/login",
-      state: { from: props.location }
+      state: { from: props.location },
     }}
   />
 );
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
-  const isAuthenticated = false;
-  const isLoading = false;
+  const profile = useSelector(
+    (state = {}) => get(state, "profile", {}),
+    isEqual()
+  );
+  const isAuthenticated = !isEmpty(profile.data);
+  const isLoading = get(profile, "isFetching", false);
 
   return !isLoading ? (
     <Route
       {...rest}
-      render={props =>
+      render={(props) =>
         isAuthenticated ? <Component {...props} /> : <RedirectRoute />
       }
     />

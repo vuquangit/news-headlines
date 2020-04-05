@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header__item">
-        <NavLink to="/">Headline</NavLink>
+        <NavLink to="/">News Headlines</NavLink>
       </div>
       <div className="header__item">
         <CustomNews />

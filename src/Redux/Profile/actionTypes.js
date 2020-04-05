@@ -1,0 +1,2 @@
+export const PROFILE_UPDATE = "PROFILE_UPDATE";
+export const PROFILE_CLEAR = "PROFILE_CLEAR";
